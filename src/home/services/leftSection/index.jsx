@@ -1,8 +1,9 @@
 import React from "react";
 import { Button, Container, LargeText, SmallText, Text } from "./styles";
-import { Link } from "react-scroll";
+import { useNavigate } from "react-router-dom";
 
-export default function LeftSection({ setIsFormOpen }) {
+export default function LeftSection() {
+  const navigate = useNavigate();
   return (
     <Container>
       <SmallText>our services</SmallText>
@@ -17,9 +18,7 @@ export default function LeftSection({ setIsFormOpen }) {
         clicks, higher quality traffic, scroll-stopping ads, better
         <br /> ROAS and ultimately... more profit.
       </Text>
-      {/* <Link to={"form"} smooth duration={1000} offset={-100}> */}
-      <Button onClick={() => setIsFormOpen(true)}>Get Started</Button>
-      {/* </Link> */}
+      <Button onClick={() => navigate("/form")}>Get Started</Button>
     </Container>
   );
 }

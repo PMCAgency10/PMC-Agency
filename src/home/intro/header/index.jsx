@@ -12,10 +12,11 @@ import {
 import logoSrc from "../../../static/logo.webp";
 import useBreakpoint from "../../../utilities/mediaQuery";
 import { Link } from "react-scroll";
+import { useNavigate } from "react-router-dom";
 
-export default function Header({ setIsFormOpen }) {
+export default function Header() {
   const isSmallScreen = useBreakpoint(770);
-
+  const navigate = useNavigate();
   return (
     <Container>
       <LogoContainer>
@@ -34,9 +35,13 @@ export default function Header({ setIsFormOpen }) {
         <Link to={"case-studies"} smooth duration={1000} offset={-100}>
           <MenuItem>Latest studies</MenuItem>
         </Link>
-        {/* <Link to={"form"} smooth duration={1000} offset={-100}> */}
-        <Button onClick={() => setIsFormOpen(true)}>Apply Now</Button>
-        {/* </Link> */}
+        <Button
+          onClick={() => {
+            navigate("/form");
+          }}
+        >
+          Apply Now
+        </Button>
       </MenuContainer>
     </Container>
   );

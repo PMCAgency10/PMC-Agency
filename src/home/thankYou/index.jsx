@@ -1,7 +1,9 @@
 import React from "react";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
-export default function ThankYou({ setDisplayThankYouPage }) {
+export default function ThankYou() {
+  const navigate = useNavigate();
   return (
     <div
       style={{
@@ -38,7 +40,7 @@ export default function ThankYou({ setDisplayThankYouPage }) {
       <Button
         variant="contained"
         style={{ width: "200px", height: "40px" }}
-        onClick={() => setDisplayThankYouPage(false)}
+        onClick={() => navigate("/")}
       >
         back to home
       </Button>

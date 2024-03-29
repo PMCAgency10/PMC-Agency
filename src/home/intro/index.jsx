@@ -9,6 +9,7 @@ import useBreakpoint from "../../utilities/mediaQuery";
 
 export default function Intro({ setIsFormOpen }) {
   const isSmallScreen = useBreakpoint(770);
+
   return (
     <Container>
       <EffectsTop src={effect} />

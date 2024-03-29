@@ -14,7 +14,6 @@ export default function Home() {
   const stepsRef = useRef(null);
   const [stepsInView, setStepsInView] = useState(0);
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [displayThankYouPage, setDisplayThankYouPage] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -41,22 +40,11 @@ export default function Home() {
 
   return (
     <Container>
-      {isFormOpen ? (
-        <AnimatedForm
-          setIsFormOpen={setIsFormOpen}
-          setDisplayThankYouPage={setDisplayThankYouPage}
-        />
-      ) : displayThankYouPage ? (
-        <ThankYou />
-      ) : (
-        <>
-          <Intro setIsFormOpen={setIsFormOpen} />
-          <Services setIsFormOpen={setIsFormOpen} />
-          <CaseStudies />
-          <Steps targetRef={stepsRef} inView={stepsInView} />
-          <ContactUs />
-        </>
-      )}
+      <Intro setIsFormOpen={setIsFormOpen} />
+      <Services setIsFormOpen={setIsFormOpen} />
+      <CaseStudies />
+      <Steps targetRef={stepsRef} inView={stepsInView} />
+      <ContactUs />
     </Container>
   );
 }

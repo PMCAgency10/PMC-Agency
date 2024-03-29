@@ -7,8 +7,10 @@ import {
   SmallTittle,
 } from "./styles";
 import { Link } from "react-scroll";
+import { useNavigate } from "react-router-dom";
 
 export default function LeftSection({ setIsFormOpen }) {
+  const navigate = useNavigate();
   return (
     <Container>
       <SmallTittle>Outcome driven</SmallTittle>
@@ -25,7 +27,7 @@ export default function LeftSection({ setIsFormOpen }) {
       {/* <Link to={"form"} smooth duration={1000} offset={-100}> */}
       <Button
         onClick={() => {
-          setIsFormOpen(true);
+          navigate("/form");
         }}
       >
         Start Application
