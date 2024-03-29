@@ -25,6 +25,10 @@ export const MainTittle = styled.p`
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   margin-top: -1px;
+  @media (max-width: 770px) {
+    font-size: 40px;
+    width: 80%;
+  }
 `;
 
 export const SmallText = styled.p`
@@ -32,6 +36,9 @@ export const SmallText = styled.p`
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   margin-top: -10px;
+  @media (max-width: 770px) {
+    font-size: 13px;
+  }
 `;
 
 export const Button = styled.button`

@@ -31,7 +31,7 @@ export default function Form() {
       "Best regards,\nYour Marketing Agency";
 
     var mailtoLink =
-      "mailto:your@email.com?subject=" +
+      "mailto:info@pledgemc.com" +
       encodeURIComponent(subject) +
       "&body=" +
       encodeURIComponent(body);

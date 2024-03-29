@@ -24,6 +24,10 @@ export const LargeText = styled.p`
   font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
   margin-top: -1px;
+  @media (max-width: 770px) {
+    line-height: 50px;
+    font-size: 40px;
+  }
 `;
 
 export const Text = styled.p`
@@ -31,6 +35,9 @@ export const Text = styled.p`
   font-size: 15px;
   line-height: 20px;
   margin-top: -20px;
+  @media (max-width: 770px) {
+    font-size: 13px;
+  }
 `;
 
 export const Button = styled.button`

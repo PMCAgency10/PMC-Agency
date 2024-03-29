@@ -8,11 +8,17 @@ import {
   MenuContainer,
   MenuItem,
 } from "./styles";
+
+import {DividerHeader} from "../styles";
+
 import logoSrc from "../../../static/logo.webp";
 import useBreakpoint from "../../../utilities/mediaQuery";
 import { Link } from "react-scroll";
 
 export default function Header() {
+ 
+  const isSmallScreen = useBreakpoint(770);
+
   return (
     <Container>
       <LogoContainer>
@@ -21,6 +27,8 @@ export default function Header() {
           Pledge Media <br /> Consultancy
         </CompanyName>
       </LogoContainer>
+      
+
       <MenuContainer>
         <Link to={"services"} smooth duration={1000} offset={-100}>
           <MenuItem>About</MenuItem>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Container, LargeText, SmallText, Text } from "./styles";
+import { Link } from "react-scroll";
 
 export default function LeftSection() {
   return (
@@ -16,7 +17,9 @@ export default function LeftSection() {
         clicks, higher quality traffic, scroll-stopping ads, better
         <br /> ROAS and ultimately... more profit.
       </Text>
-      <Button>Get Started</Button>
+      <Link to={"form"} smooth duration={1000} offset={-100}>
+        <Button>Get Started</Button>
+      </Link>
     </Container>
   );
 }

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 90%;
-  height: 40vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,18 +10,19 @@ export const Container = styled.div`
   margin-top: -50px;
   gap: 50px;
   @media (max-width: 770px) {
-    height: 50vh;
+    gap: 0px;
+    height: 60vh;
   }
 `;
 export const FormContainer = styled.form`
   width: 90%;
-  height: 40vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   align-self: center;
   @media (max-width: 770px) {
-    height: 50vh;
+    height: 60vh;
   }
 `;
 
@@ -40,6 +41,7 @@ export const Input = styled.input`
   @media (max-width: 770px) {
     width: 300px;
     font-size: 15px;
+    margin-top: 10px;
   }
 `;
 

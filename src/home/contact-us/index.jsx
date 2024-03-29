@@ -8,7 +8,7 @@ import {
   CopyRight,
   Image,
 } from "./styles";
-import imageSrc from "../../static/contact-us.webp";
+import imageSrc from "../../static/CU2.webp";
 import logoSrc from "../../static/logo.webp";
 import { CompanyName, Logo, LogoContainer } from "../intro/header/styles";
 import useBreakpoint from "../../utilities/mediaQuery";

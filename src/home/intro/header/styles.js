@@ -85,6 +85,6 @@ export const Button = styled.button`
     border: 1px solid white;
   }
   @media (max-width: 770px) {
-    display: none;
+    display: none:
   }
 `;

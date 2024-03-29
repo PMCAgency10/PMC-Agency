@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  right: 0;
   width: 45%;
   @media (max-width: 770px) {
     width: 100%;
@@ -14,11 +15,19 @@ export const Container = styled.div`
 export const Logo = styled.img`
   width: 150px;
   height: 150px;
+  @media (max-width: 770px) {
+    width: 120px;
+    height: 120px;
+  }
 `;
 
 export const SocialMediaLogo = styled.img`
   width: 70px;
   height: 70px;
+  @media (max-width: 770px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export const Header = styled.div`
@@ -37,6 +46,9 @@ export const Body = styled.div`
   width: 100%;
   height: 80%;
   gap: 70px;
+  @media (max-width: 770px) {
+    gap: 50px;
+  }
 `;
 
 export const ListContainer = styled.div`
@@ -44,6 +56,9 @@ export const ListContainer = styled.div`
   flex-direction: column;
   height: 100%;
   width: 30%;
+  @media (max-width: 770px) {
+    width: 37%;
+  }
 `;
 
 export const ListTitle = styled.p`
