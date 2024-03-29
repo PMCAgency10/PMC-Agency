@@ -53,13 +53,16 @@ export const SocialMediaIcon = styled.img`
 
 export const Text = styled.p`
   color: #a744c8;
+  position: absolute;
   font-weight: bold;
   font-size: 22px;
-  bottom: 0;
+  bottom: -10px;
+  right: 20px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: right;
   line-height: 0px;
   @media (max-width: 770px) {
-    font-size: 15px;
+    /* font-size: 15px; */
+    bottom: 50px;
   }
 `;

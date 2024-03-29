@@ -8,7 +8,7 @@ import {
 } from "./styles";
 import { Link } from "react-scroll";
 
-export default function LeftSection() {
+export default function LeftSection({ setIsFormOpen }) {
   return (
     <Container>
       <SmallTittle>Outcome driven</SmallTittle>
@@ -22,9 +22,15 @@ export default function LeftSection() {
         We're omni-channel digital advertising growth <br />
         experts focused on outcome-based results
       </SmallText>
-      <Link to={"form"} smooth duration={1000} offset={-100}>
-        <Button>Start Application</Button>
-      </Link>
+      {/* <Link to={"form"} smooth duration={1000} offset={-100}> */}
+      <Button
+        onClick={() => {
+          setIsFormOpen(true);
+        }}
+      >
+        Start Application
+      </Button>
+      {/* </Link> */}
     </Container>
   );
 }

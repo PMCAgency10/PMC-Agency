@@ -6,15 +6,20 @@ import CaseStudies from "./case-studies";
 import ContactUs from "./contact-us";
 import Form from "./form";
 import Steps from "./steps";
+import AnimatedForm from "./animatedForm";
+import { Button } from "@mui/material";
+import ThankYou from "./thankYou";
 
 export default function Home() {
   const stepsRef = useRef(null);
   const [stepsInView, setStepsInView] = useState(0);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [displayThankYouPage, setDisplayThankYouPage] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        entry.isIntersecting && setStepsInView(stepsInView+1) 
+        entry.isIntersecting && setStepsInView(stepsInView + 1);
       },
       {
         root: null,
@@ -33,13 +38,25 @@ export default function Home() {
       }
     };
   }, []);
+
   return (
     <Container>
-      <Intro />
-      <Services />
-      <Steps  targetRef={stepsRef} inView={stepsInView} />
-      <ContactUs />
-      <Form />
+      {isFormOpen ? (
+        <AnimatedForm
+          setIsFormOpen={setIsFormOpen}
+          setDisplayThankYouPage={setDisplayThankYouPage}
+        />
+      ) : displayThankYouPage ? (
+        <ThankYou />
+      ) : (
+        <>
+          <Intro setIsFormOpen={setIsFormOpen} />
+          <Services setIsFormOpen={setIsFormOpen} />
+          <CaseStudies />
+          <Steps targetRef={stepsRef} inView={stepsInView} />
+          <ContactUs />
+        </>
+      )}
     </Container>
   );
 }

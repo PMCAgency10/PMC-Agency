@@ -25,11 +25,12 @@ export const LeftSection = styled.div`
   }
 `;
 export const RightSection = styled.div`
-  width: 40%;
+  width: 55%;
   display: flex;
+  justify-self: flex-start;
   flex-direction: column;
-  height: 100%;
-  align-items: flex-end;
+  height: 400px;
+  align-items: flex-start;
   @media (max-width: 770px) {
     width: 100%;
   }

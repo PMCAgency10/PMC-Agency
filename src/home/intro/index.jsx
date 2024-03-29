@@ -1,28 +1,22 @@
 import React from "react";
-import {
-  Body,
-  Container,
-  Divider,
-  EffectsTop,
-  EffectsBottom
-} from "./styles";
+import { Body, Container, Divider, EffectsTop, EffectsBottom } from "./styles";
 
 import Header from "./header";
 import LeftSection from "./leftSection";
 import RightSection from "./rightSection";
 import effect from "../../static/s.svg";
-import useBreakpoint from "../../utilities/mediaQuery"
+import useBreakpoint from "../../utilities/mediaQuery";
 
-export default function Intro() {
+export default function Intro({ setIsFormOpen }) {
   const isSmallScreen = useBreakpoint(770);
   return (
     <Container>
       <EffectsTop src={effect} />
       <EffectsBottom src={effect} />
-      <Header />
+      <Header setIsFormOpen={setIsFormOpen} />
       {!isSmallScreen && <Divider />}
       <Body>
-        <LeftSection />
+        <LeftSection setIsFormOpen={setIsFormOpen} />
         <RightSection />
       </Body>
       {/*<Wrapper>

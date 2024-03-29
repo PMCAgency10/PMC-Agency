@@ -3,10 +3,10 @@ import { Container } from "./styles";
 import LeftSection from "./leftSection";
 import RightSection from "./rightSection";
 
-export default function Services() {
+export default function Services({ setIsFormOpen }) {
   return (
     <Container id="services">
-      <LeftSection />
+      <LeftSection setIsFormOpen={setIsFormOpen} />
       <RightSection />
     </Container>
   );

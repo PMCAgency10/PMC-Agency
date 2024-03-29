@@ -9,25 +9,23 @@ import {
   MenuItem,
 } from "./styles";
 
-import {DividerHeader} from "../styles";
-
 import logoSrc from "../../../static/logo.webp";
 import useBreakpoint from "../../../utilities/mediaQuery";
 import { Link } from "react-scroll";
 
-export default function Header() {
- 
+export default function Header({ setIsFormOpen }) {
   const isSmallScreen = useBreakpoint(770);
 
   return (
     <Container>
       <LogoContainer>
         <Logo src={logoSrc} />
-        <CompanyName>
-          Pledge Media <br /> Consultancy
-        </CompanyName>
+        {!isSmallScreen && (
+          <CompanyName>
+            Pledge Media <br /> Consultancy
+          </CompanyName>
+        )}
       </LogoContainer>
-      
 
       <MenuContainer>
         <Link to={"services"} smooth duration={1000} offset={-100}>
@@ -36,9 +34,9 @@ export default function Header() {
         <Link to={"case-studies"} smooth duration={1000} offset={-100}>
           <MenuItem>Latest studies</MenuItem>
         </Link>
-        <Link to={"form"} smooth duration={1000} offset={-100}>
-          <Button>Apply Now</Button>
-        </Link>
+        {/* <Link to={"form"} smooth duration={1000} offset={-100}> */}
+        <Button onClick={() => setIsFormOpen(true)}>Apply Now</Button>
+        {/* </Link> */}
       </MenuContainer>
     </Container>
   );
