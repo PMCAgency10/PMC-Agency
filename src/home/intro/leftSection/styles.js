@@ -45,9 +45,9 @@ export const Button = styled.button`
   font-size: 15px;
   border: none;
   cursor: pointer;
-  &:hover {
+  /* &:hover {
     color: #a744c8;
     background-color: white;
     border: 1px solid white;
-  }
+  } */
 `;
